@@ -29,6 +29,8 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    z-index: 1000;
 }
 .header__logo {
     width: 150px;
@@ -96,6 +98,9 @@ a {
 .messenger:hover {
     background-color: initial;
     filter: invert(1);
+}
+.main {
+    padding-top: 50px;
 }
 .test {
     width: 100%;
@@ -195,6 +200,9 @@ a {
     color: #FFFFFF;
 }
 @media screen and (max-width: 1400px) { 
+    .main {
+        padding-top: 80px;
+    }
     .games__mobcontainer {
         width: 80%;
         display: flex;
