@@ -587,7 +587,7 @@ a {
         width: 95%;
     }
     .free__input {
-        max-width: 100%;
+        max-width: 270px;
         max-height: 40px;
     }
     .free-btn {
