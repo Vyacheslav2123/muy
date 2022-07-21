@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Audiowide&family=Inter&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -200,6 +200,58 @@ a {
     font-size: 16px;
     color: #FFFFFF;
 }
+.join-tg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 40px;
+    align-items: center;
+    padding: 0 100px;
+}
+.join-tg__container {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: baseline;
+}
+.join-tg__title {
+    font-family: 'Audiowide';
+    font-weight: 400;
+    font-size: 50px;
+}
+.join-tg__desc {
+    width: 70%;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 20px;
+}
+.join-tg__btn {
+    width: 210px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #624DE3;
+    border: solid 2px #624DE3;
+    color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+    transition: all .3s;
+}
+.join-tg__btn:hover {
+    background-color: white;
+    border: solid 2px white;
+    color: black;
+}
+.join-tg__btn > img {
+    max-width: 20%;
+    max-height: 40%;
+    margin-right: 5px;
+}
 @media screen and (max-width: 1400px) { 
     .main {
         padding-top: 80px;
@@ -224,6 +276,9 @@ a {
 @media screen and (max-width: 1070px) {
     .games__mobcontainer {
         width: 98%;
+    }
+    .join-tg__container > img {
+        margin-left: -80px;    
     }
 }
 @media screen and (max-width: 875px) {
@@ -373,6 +428,22 @@ a {
         justify-content: center;
         padding: 0;
     }
+    .join-tg {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .join-tg__container {
+        width: 95%;
+        align-items: center;
+    }
+    .join-tg__desc {
+        text-align: center;
+    }
+    .join-tg__container > img {
+        margin: 0;
+    }
 }
 @media screen and (max-width: 470px) { 
     .games__img {
@@ -382,6 +453,9 @@ a {
     }
     .games__title {
         font-size: 50px;
+    }
+    .join-tg__title {
+        font-size: 35px;
     }
 }
 @media screen and (max-width: 330px) { 
