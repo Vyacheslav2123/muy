@@ -42,7 +42,8 @@ a {
     font-size: 30px;
     border: solid 2px #CFD8DC;
     border-radius: 5px;
-    color: #CFD8DC;
+    color: white;
+    font-family: 'Audiowide';
     transition: .3s all;
 }
 .header__logo:hover {
@@ -118,6 +119,12 @@ a {
 }
 .test__title {
     width: 60%;
+    font-size: 51px;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+.test__title > p {
+    color: #624DE3;
     font-size: 51px;
     line-height: 60px;
     margin-bottom: 20px;
