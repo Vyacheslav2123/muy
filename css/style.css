@@ -250,14 +250,14 @@ a {
     transition: all .3s;
 }
 .join-tg__btn:hover {
-    background-color: white;
-    border: solid 2px white;
-    color: black;
+    background-color: initial;
+    border: solid 2px white !important;
 }
 .join-tg__btn > img {
     max-width: 20%;
     max-height: 40%;
     margin-right: 5px;
+    filter: invert(1);
 }
 @media screen and (max-width: 1400px) { 
     .main {
