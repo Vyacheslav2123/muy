@@ -15,7 +15,7 @@ body {
     background-color: black;
     color: white;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 li {
     list-style-type: none;
