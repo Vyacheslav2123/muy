@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Покупка крутых игровых аккаунтов: Fortnite, PUBG, FIFA22, Standoff2 и так далее!">
     <meta name="keywords" content="игры; покупка; Fortnite аккаунт; аккаунты; ключи для игр">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <title>Магазин аккаунтов Gamestore</title>
 </head>
 <body>
     <header class="header">
-        <a href=""><div class="header__logo">G S</div></a>
+        <a href="./index.html"><div class="header__logo">G S</div></a>
         <div class="header-nav">
           <nav class="nav-desc">
             <li><a href="./index.html" class="nav-link">Главная</a></li>
@@ -47,17 +49,18 @@
     </header>
     <div class="main">
       <div class="test">
-        <div class="test-container">
+        <div class="test-container"
+        data-aos="fade-right"
+        data-aos-duration="2500">
           <h1 class="test__title">
-            Магазин игровых аккаунтов <p>Gamestore</p>
+            Магазин игровых аккаунтов <p>GameStore</p>
           </h1>
           <p class="test__desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Obcaecati libero ea labore quas. Laudantium culpa quo 
-            exercitationem necessitatibus ut iste! Aliquam quae facilis 
-            fuga, temporibus deserunt ullam consectetur ducimus nesciunt.
+            Играешь в игры но не хочешь долго прокачивать аккаунт? 
+            В нашем магазине GameStore ты можешь преобрести прокаченные 
+            аккаунты от настоящих игроков по лучшей цене.
           </p>
-          <a href="#" class="learn-btn">Learn more</a>
+          <a href="#" class="learn-btn">Open store</a>
         </div>
         <div class="test-container">
           <img src="./img/game.png" >
@@ -67,7 +70,7 @@
         <h1 class="games__title">
           GAMES
         </h1>
-        <div class="games__container">
+        <div class="games__container" data-aos="zoom-in" data-aos-duration="1500">
           <div class="games__subcontainer">
             <div class="games__mobcontainer">
               <a href=""><div class="games__img">
@@ -115,11 +118,12 @@
         </div>
       </div>
       <div class="join-tg">
-        <div class="join-tg__container">
+        <div class="join-tg__container" data-aos="fade-right"
+        data-aos-duration="2500">
           <h1 class="join-tg__title">JOIN OUR</h1>
           <h1 class="join-tg__title" style="color: #624DE3;">TELEGRAM</h1>
-          <p class="join-tg__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-          <a href="" class="join-tg__btn"> <img src="./img/telegram.svg"> Join Telegram</a>
+          <p class="join-tg__desc">В нашем телеграм канале проходят множество розыгрышей от ключей для ГТА 5 до крупных аккаунтов! Скорее переходи.</p>
+          <a href="" class="join-tg__btn"> <img src="./img/telegram.svg">Join Telegram</a>
         </div>
         <div class="join-tg__container">
           <img src="./img/game2.png" >
@@ -129,9 +133,10 @@
         <div class="free__container">
           <img src="./img/free.svg" >
         </div>
-        <div class="free__container">
-          <h1 class="free__title">NEWSLETTER SUBSCRIBE </h1>
-          <p class="free__desc">In order to start receiving our news, all you have to do is enter your email address. Everything else will be taken care of by us. We will send you emails containing information about game. We don’t spam.</p>
+        <div class="free__container" data-aos="fade-left"
+        data-aos-duration="2500">
+          <h1 class="free__title">EMAIL SUBSCRIBE </h1>
+          <p class="free__desc">Подпишитесь на рассылку уведомлений от сайта. Благодаря этому вы одними из первых узнаете о розыгрыше аккаунтов или ключей! А также вам будут приходить новостные рассылки о нашем проекте.</p>
           <form action="" class="free_form">
             <input type="text" class="free__input" placeholder="You email address" />
             <button type="submit" class="free-btn">Subcribe</button>
@@ -139,7 +144,33 @@
         </div>
       </div>
       </div>
+      <div class="footer">
+        <div class="footer__container">
+          <div class="footer__inner">
+            <a href="./index.html"><div class="footer__logo">G S</div></a>
+            <p>© 2022 All rights reserved</p>
+          </div>
+          <div class="footer__inner">
+            <nav class="nav-desc">
+              <li><a href="./index.html" class="nav-link">Главная</a></li>
+              <li><a href="#" class="nav-link">Каталог</a></li>
+              <li><a href="#" class="nav-link">Инструкция</a></li>
+              <li><a href="#" class="nav-link">Поддержка</a></li>
+            </nav>
+          </div>
+          <div class="footer__inner">
+            <div class="footer-messengers">
+              <a href=""><div class="messenger"><img src="./img/telegram.svg"  class="messenger-img"></div></a>
+              <a href=""><div class="messenger"><img src="./img/discord.svg"  class="messenger-img"></div></a>
+              <a href=""><div class="messenger"><img src="./img/youtube.svg"  class="messenger-img"></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+<script>
+  AOS.init();
+</script>
 <script src="./script/script.js"></script>
 </body>
 </html>
