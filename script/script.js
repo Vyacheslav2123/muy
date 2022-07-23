@@ -11,6 +11,7 @@ menu__box.addEventListener('click', event => {
 function reg() {
     document.getElementById("reg").classList.add('reg');
     document.getElementById("entry").classList.add('delete');
+    document.getElementById("reg").classList.remove('delete');
 }
 function entry () {
     document.getElementById("reg").classList.add('delete');
