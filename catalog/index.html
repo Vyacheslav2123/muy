@@ -10,17 +10,19 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Магазин аккаунтов Gamestore</title>
+    <title>Магазин аккаунтов Rugame</title>
 </head>
 <body>
+  <div id="content">
     <header class="header">
-        <a href="../index.html"><div class="header__logo">G S</div></a>
+        <a href="../index.html"><div class="header__logo">R G</div></a>
         <div class="header-nav">
           <nav class="nav-desc">
             <li><a href="../index.html" class="nav-link">Главная</a></li>
             <li><a href="#" class="nav-link">Каталог</a></li>
             <li><a href="#" class="nav-link">Инструкция</a></li>
             <li><a href="#" class="nav-link">Поддержка</a></li>
+            <li style="display: none;"><a href="../admin.html" class="nav-link">Админка</a></li>
           </nav>
           <div class="hamburger-menu">
             <input id="menu__toggle" type="checkbox" />
@@ -32,6 +34,7 @@
               <li><a class="menu__item" href="#">Каталог</a></li>
               <li><a class="menu__item" href="#">Инструкция</a></li>
               <li><a class="menu__item" href="#">Поддержка</a></li>
+              <li style="display: none;"><a href="../admin.html" class="menu__item">Админка</a></li>
               <div class="header-messengers-mob">
                 <a href=""><div class="messenger"><img src="../img/telegram.svg"  class="messenger-img"></div></a>
                 <a href=""><div class="messenger"><img src="../img/discord.svg"  class="messenger-img"></div></a>
@@ -46,22 +49,184 @@
           <a href=""><div class="messenger"><img src="../img/youtube.svg"  class="messenger-img"></div></a>
         </div>
         <div class="header__profile">
-            <a href=""><div class="header__avatar"></div></a>
-            <div class="header__name">No Name</div>
+            <a href="javascript:profile()"><div class="header__avatar"></div></a>
+            <div class="header__name">Гость</div>
+            <ul id="profile" style="display: none;">
+              <li>Почта: <br>google@gmail.com</li>
+              <li><a href="javascript:story()">История покупок</a></li>
+              <li><a href="../index.html">Выйти</a></li>
+            </ul>
         </div>
     </header>
     <div class="main">
         <div class="catalog">
             <div class="catalog__container">
-                В РАЗРАБОТКЕ
-                <a href="../index.html">НАЗАД</a>
+              <div class="sim-slider">
+                <ul class="sim-slider-list">
+                  <li><img src="../img/black.jpg" alt="screen" class="slider-black"></li> <!-- это экран -->
+                  <li class="sim-slider-element"><img src="../img/mobile-games.jpg" alt="0"></li>
+                  <li class="sim-slider-element"><img src="../img/pk-games.jpg" alt="1"></li>
+                  <li class="sim-slider-element"><img src="../img/console-games.jpg" alt="2"></li>
+                </ul>
+                <div class="sim-slider-arrow-left"></div>
+                <div class="sim-slider-arrow-right"></div>
+                <div class="sim-slider-dots"></div>
+              </div>
+              <script>new Sim()</script>
+              <div class="sale">
+                <div class="sale__title">
+                  <h1 style="font-weight: 500;"><b style="font-weight: 900;">Лидеры</b> продаж</h1>
+                </div>
+                <div class="games__container">
+                  <div class="games__subcontainer">
+                    <div class="games__mobcontainer">
+                      <a href="javascript:gta5_2()"><div class="games__img">
+                        <img src="../img/gta5_2.jpg">
+                        <p class="games__name">Аккаунты GTA5</p>
+                      </div></a>
+                      <a href="javascript:minecraft_2()"><div class="games__img">
+                        <img src="../img/minecraft_2.jpg">
+                        <p class="games__name">Лицензионные аккаунты Minecraft</p>
+                      </div></a>
+                    </div>
+                    <div class="games__mobcontainer">
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/fifa22_2.jpg">
+                        <p class="games__name">Аккаунты с монетами FIFA 22</p>
+                      </div></a>
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/brawl-stars_2.jpeg">
+                        <p class="games__name">Топ аккаунты Brawl Stars</p>
+                      </div></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sale">
+                <div class="sale__title">
+                  <h1 style="font-weight: 500;">Все аккаунты</h1>
+                </div>
+                <div class="games__container">
+                  <div class="games__subcontainer">
+                    <div class="games__mobcontainer">
+                      <a href="javascript:gta5_2()"><div class="games__img">
+                        <img src="../img/gta5_2.jpg">
+                        <p class="games__name">Аккаунты GTA5</p>
+                      </div></a>
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/minecraft_2.jpg">
+                        <p class="games__name">Лицензионные аккаунты Minecraft</p>
+                      </div></a>
+                    </div>
+                    <div class="games__mobcontainer">
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/fifa22_2.jpg">
+                        <p class="games__name">Аккаунты с монетами FIFA 22</p>
+                      </div></a>
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/brawl-stars_2.jpeg">
+                        <p class="games__name">Топ аккаунты Brawl Stars</p>
+                      </div></a>
+                    </div>
+                  </div>
+                  <div class="games__subcontainer">
+                    <div class="games__mobcontainer">
+                      <a href="javascript:gta5_2()"><div class="games__img">
+                        <img src="../img/gta5_2.jpg">
+                        <p class="games__name">Аккаунты GTA5</p>
+                      </div></a>
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/minecraft_2.jpg">
+                        <p class="games__name">Лицензионные аккаунты Minecraft</p>
+                      </div></a>
+                    </div>
+                    <div class="games__mobcontainer">
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/fifa22_2.jpg">
+                        <p class="games__name">Аккаунты с монетами FIFA 22</p>
+                      </div></a>
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/brawl-stars_2.jpeg">
+                        <p class="games__name">Топ аккаунты Brawl Stars</p>
+                      </div></a>
+                    </div>
+                  </div>
+                  <div class="games__subcontainer">
+                    <div class="games__mobcontainer">
+                      <a href="javascript:gta5_2()"><div class="games__img">
+                        <img src="../img/gta5_2.jpg">
+                        <p class="games__name">Аккаунты GTA5</p>
+                      </div></a>
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/minecraft_2.jpg">
+                        <p class="games__name">Лицензионные аккаунты Minecraft</p>
+                      </div></a>
+                    </div>
+                    <div class="games__mobcontainer">
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/fifa22_2.jpg">
+                        <p class="games__name">Аккаунты с монетами FIFA 22</p>
+                      </div></a>
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/brawl-stars_2.jpeg">
+                        <p class="games__name">Топ аккаунты Brawl Stars</p>
+                      </div></a>
+                    </div>
+                  </div>
+                  <div class="games__subcontainer">
+                    <div class="games__mobcontainer">
+                      <a href="javascript:gta5_2()"><div class="games__img">
+                        <img src="../img/gta5_2.jpg">
+                        <p class="games__name">Аккаунты GTA5</p>
+                      </div></a>
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/minecraft_2.jpg">
+                        <p class="games__name">Лицензионные аккаунты Minecraft</p>
+                      </div></a>
+                    </div>
+                    <div class="games__mobcontainer">
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/fifa22_2.jpg">
+                        <p class="games__name">Аккаунты с монетами FIFA 22</p>
+                      </div></a>
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/brawl-stars_2.jpeg">
+                        <p class="games__name">Топ аккаунты Brawl Stars</p>
+                      </div></a>
+                    </div>
+                  </div>
+                  <div class="games__subcontainer">
+                    <div class="games__mobcontainer">
+                      <a href="javascript:gta5_2()"><div class="games__img">
+                        <img src="../img/gta5_2.jpg">
+                        <p class="games__name">Аккаунты GTA5</p>
+                      </div></a>
+                      <a href="javascript:minecraft_2()"><div class="games__img">
+                        <img src="../img/minecraft_2.jpg">
+                        <p class="games__name">Лицензионные аккаунты Minecraft</p>
+                      </div></a>
+                    </div>
+                    <div class="games__mobcontainer">
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/fifa22_2.jpg">
+                        <p class="games__name">Аккаунты с монетами FIFA 22</p>
+                      </div></a>
+                      <a href="#!"><div class="games__img">
+                        <img src="../img/brawl-stars_2.jpeg">
+                        <p class="games__name">Топ аккаунты Brawl Stars</p>
+                      </div></a>
+                    </div>
+                  </div>
+                </div>
+                <button class="games__more-btn admin__inner-btn" type="button">Показать больше</button>
+              </div>
             </div>
         </div>
     </div>
       <div class="footer">
         <div class="footer__container">
           <div class="footer__inner">
-            <a href="../index.html"><div class="footer__logo">G S</div></a>
+            <a href="../index.html"><div class="footer__logo">R G</div></a>
             <p>© 2022 All rights reserved</p>
           </div>
           <div class="footer__inner">
@@ -82,9 +247,132 @@
         </div>
       </div>
     </div>
+  </body>
 <script>
   AOS.init();
 </script>
 <script src="../script/script.js"></script>
+<div id="gta5_2" style="display: none;">
+  <div class="subcatalog__container">
+    <div class="close"><a href="javascript:gta5_2_close()" style=" color: white;
+      font-weight: 800;margin-right: 10px;">X</a></div>
+    <div class="subcatalog__inner">
+      <div class="subcatalog__subinner">
+        <ul class="slider_picture">
+          <li>
+              <input type="radio" id="slide1" name="slide" checked="">
+              <label for="slide1"></label>
+              <img src="../img/gta5.jpg" alt=" ">
+          </li>
+          <li>
+              <input type="radio" id="slide2" name="slide">
+              <label for="slide2"></label>
+              <img src="../img/gta5_2.jpg" alt=" ">
+          </li>
+          <li>
+              <input type="radio" id="slide3" name="slide">
+              <label for="slide3"></label>
+              <img src="../img/gta5_3.jpg" alt=" ">
+          </li>
+          <li>
+              <input type="radio" id="slide4" name="slide">
+              <label for="slide4"></label>
+              <img src="../img/gta5_4.png" alt=" ">
+          </li>
+        </ul>
+      </div>
+      <div class="subcatalog__subinner">
+        <h1 class="subcatalog__subinner-title">Аккаунт GTA5</h1>
+        <div class="subcatalog__scroll">
+          <p class="subcatalog__subinner-text">⭐ Недвижимость:
+            <br>
+            ◦ Офис в западном здании Maze Bank.
+            <br>
+            ◦ Бункер в лесу Палето.
+            <br>
+            ⭐ Транспорт:
+            <br>
+            ◦ Dune FAV.
+            <br>
+            ◦ Pegassi Vortex.
+          </p>
+        </div>
+        <button type="button" class="subcatalog__subinner-btn">Купить за 249 руб.</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="minecraft_2" style="display: none;">
+  <div class="subcatalog__container">
+    <div class="close"><a href="javascript:minecraft_2_close()" style=" color: white;
+      font-weight: 800;margin-right: 10px;">X</a></div>
+    <div class="subcatalog__inner">
+      <div class="subcatalog__subinner">
+        <ul class="slider_picture">
+          <li>
+            <input type="radio" id="slide5" name="slide2" checked="">
+            <label for="slide5"></label>
+            <img src="../img/minecraft_2.jpg" alt=" ">
+        </li>
+        <li>
+            <input type="radio" id="slide6" name="slide2">
+            <label for="slide6"></label>
+            <img src="../img/minecraft_3.jpg" alt=" ">
+        </li>
+        <li>
+            <input type="radio" id="slide7" name="slide2">
+            <label for="slide7"></label>
+            <img src="../img/minecraft_4.jpg" alt=" ">
+        </li>
+        <li>
+            <input type="radio" id="slide8" name="slide2">
+            <label for="slide8"></label>
+            <img src="../img/minecraft_5.jpg" alt=" ">
+        </li>
+        </ul>
+      </div>
+      <div class="subcatalog__subinner">
+        <h1 class="subcatalog__subinner-title">Лицензионный аккаунт Minecraft</h1>
+        <div class="subcatalog__scroll">
+          <p class="subcatalog__subinner-text">Лицензионный аккаунт Mojang с игрой "Minecraft Premium (Java Edition)" без установленного секретного вопроса.
+            <br>
+            • Гарантия 10 лет на замену нерабочего товара. 
+            <br>
+            • Вы можете авторизоваться на сайте и в лаунчере(клиенте).
+            <br>
+            • Доступ к серверу "Hypixel" гарантирован!
+            <br>            
+            После покупки Вы получаете:
+            <br>
+            • Аккаунт от "Minecraft Premium: Java Edition" (логин:пароль)
+            <br>
+            Полный доступ к сайту дает Вам возможность:
+            <br>
+            • Смена скина
+            <br>
+            • Смена ника
+            <br>
+            • Смена пароля
+            <br>
+            • Не сталкиваться с секретным вопросом
+          </p>
+        </div>
+        <button type="button" class="subcatalog__subinner-btn">Купить за 99 руб.</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="story" style="display: none;">
+  <div class="story__container">
+    <div class="close" style="margin-left: -30px !important;"><a style="color: white;" href="javascript:story_close()">X</a></div>
+    <h1 class="story__title">История покупок</h1>
+    <div class="story__inner">
+      <h1 class="story__text">Пока пусто...</h1>
+    </div>
+  </div>
+</div>
 </body>
 </html>

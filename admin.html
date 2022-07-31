@@ -13,6 +13,7 @@
     <title>Магазин аккаунтов Rugame</title>
 </head>
 <body>
+  <div id="content">
     <header class="header">
         <a href="../index.html"><div class="header__logo">R G</div></a>
         <div class="header-nav">
@@ -21,6 +22,7 @@
             <li><a href="#" class="nav-link">Каталог</a></li>
             <li><a href="#" class="nav-link">Инструкция</a></li>
             <li><a href="#" class="nav-link">Поддержка</a></li>
+            <li><a href="../admin.html" class="nav-link">Админка</a></li>
           </nav>
           <div class="hamburger-menu">
             <input id="menu__toggle" type="checkbox" />
@@ -45,58 +47,46 @@
           <a href=""><div class="messenger"><img src="../img/discord.svg"  class="messenger-img"></div></a>
           <a href=""><div class="messenger"><img src="../img/youtube.svg"  class="messenger-img"></div></a>
         </div>
-        <a href="../index.html" class="enter-btn">Назад</a>
+        <div class="header__profile">
+            <a href=""><div class="header__avatar"></div></a>
+            <div class="header__name">No Name</div>
+        </div>
     </header>
     <div class="main">
-      <div class="mod-cookiebar" id="cookie">
-        <p class="mod-cookiebar__text">
-            Продолжая использовать сайт, 
-            вы даете согласие на использование 
-            нами файлов cookie, с целью сбора 
-            статистики посещаемости сайта и персонализации 
-            предложений с учетом ваших интересов. 
-            <a href="./politica.html">Политика конфиденциальности</a>
-        </p>
-        <button type="button" onclick="cook()" class="mod-cookiebar__btn">ОК</button>
-      </div>
-      <script>
-        function cook() {
-            document.getElementById("cookie").className = "mod-cookiebar__disable";
-        }
-      </script>
-       <div class="enter">
-         <div class="enter__container">
-           <form action="./check.php" class="entry" id="entry">
-             <p class="entry__text">Введите логин</p>
-             <input type="text" name="login_entry" class="entry__data" placeholder="Login">
-             <br><br>
-             <p class="entry__text">Введите пароль</p>
-             <input type="password" name="pass_entry" class="entry__data" placeholder="Password">
-             <div class="entry__btn">
-              <button type="submit" class="entry-btn">Войти</button>
-             </div>
-             <div class="register-start">
-               <p>Нет аккаунта?<button type="button" onclick="reg()" class="register-start-btn">Зарегистрируйтесь</button></p>
-             </div>
-           </form>
-           <form action="./index.html" style="display: none;" id="reg">
-            <p class="reg__text">Придумайте логин</p>
-            <input type="text" name="login_reg" class="reg__data" placeholder="Login">
-            <br><br>
-            <p class="reg__text">Введите почту</p>
-            <input type="email" name="email" class="reg__data" placeholder="Email">
-            <br><br>
-            <p class="reg__text">Придумайте пароль(от 6 символов)</p>
-            <input type="password" name="pass_reg" class="reg__data" placeholder="Password">
-            <div class="reg__btn">
-             <button type="submit" class="entry-btn">Зарегистрироваться</button>
+        <div class="admin">
+            <div class="admin__title">Админ панель</div>
+            <div class="admin__container">
+                <div class="admin__inner">
+                    <p class="admin__inner-text">Зарегистрировано пользователей: <a href="">0</a></p>
+                    <p class="admin__inner-text">Забанено пользователей: <a href="">0</a></p>
+                    <p class="admin__inner-text">Заработано: 0 руб.</p>
+                </div>
+                <div class="admin__inner">
+                    <p class="admin__inner-text">Аккаунтов к наличии: 0</p>
+                    <p class="admin__inner-text">Аккаунтов продано: 0</p>
+                    <p class="admin__inner-text">Онлайн на сайте: <a href="">1</a></p>
+                </div>
             </div>
-            <div class="entry-start">
-              <p>Есть аккаунт?<button onclick="entry()" type="button" class="entry-start-btn">Войдите</button></p>
+            <input type="text" class="admin__inner-input" id="input" placeholder="Введите ник пользователя" />
+            <button class="admin__inner-btn" onclick="checking()" type="button">Найти</button>
+            <br>
+            <p id="total"></p>
+            <div id="result" style="display: none;">
+                <div class="result__title">Данные об аккаунте</div>
+                <div class="result__container">
+                    <div class="result__inner">
+                        <img src="./img/avatar.jpeg">
+                    </div>
+                    <div class="result__inner">
+                        <h1 class="result__nick">Snanelx</h1>
+                        <p class="result__data">Куплено аккаунтов: 0</p>
+                        <div class="result__status">Является на сайте: Администратор</div>
+                        <button class="result__btn">Добавить в бан</button>
+                    </div>
+                </div>
             </div>
-           </form>
-         </div>
-       </div>
+        </div>
+    </div>
       <div class="footer">
         <div class="footer__container">
           <div class="footer__inner">
@@ -121,9 +111,9 @@
         </div>
       </div>
     </div>
-<script>
-  AOS.init();
-</script>
 <script src="../script/script.js"></script>
+<script>
+  window.location.href = './index.html'
+</script>
 </body>
 </html>
